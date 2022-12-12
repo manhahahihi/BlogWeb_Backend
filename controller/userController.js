@@ -9,7 +9,7 @@ export const getAllUser = async (req, res, next) => {
     console.log(err);
   }
   if (!users) {
-    return res.status(404).json({ message: "No Users Found" });
+    return res.status(404).json({ message: "Can not find this User" });
   }
   return res.status(200).json({ users });
 };
