@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import Blog from "../models/Blog"
 import User from "../models/User";
 
-export const getAllBlogs = async (req,res,next) => {
+
     let blogs;
     try {
         blogs = await Blog.find();
