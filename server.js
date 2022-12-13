@@ -3,12 +3,13 @@ import mongoose from "mongoose";
 import router from "./routes/userRoutes";
 import cors from "cors";
 import blogRouter from "./routes/blogRoutes";
-//import blogRouter from "./routes/blogRoutes";
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/api/user", router);
 app.use("/api/blog", blogRouter )
+app.use(express.urlencoded({extended: true}));
+app.use(express.json())
 
 mongoose.set('strictQuery', true);
 mongoose
